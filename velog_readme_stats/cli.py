@@ -6,13 +6,13 @@ import os
 import sys
 
 from .api import VelogClient, VelogError
-from .cards import ranking, recent, summary, trend
+from .cards import badge, heatmap, ranking, recent, summary, trend
 from .history import diff_from_days_ago, update_history
 from .themes import THEMES, resolve_theme
 
 logger = logging.getLogger(__name__)
 
-CARD_NAMES = ("summary", "trend", "ranking", "recent")
+CARD_NAMES = ("summary", "trend", "ranking", "recent", "heatmap", "badge")
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -35,6 +35,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--trend-days", type=int, default=30, help="How many days of history the trend card shows")
     parser.add_argument("--diff-days", type=int, default=7, help="How many days back the summary card's delta is computed against")
     parser.add_argument("--count", type=int, default=5, help="Number of posts shown in the ranking/recent cards")
+    parser.add_argument("--weeks", type=int, default=20, help="Number of weeks shown on the heatmap card")
     return parser
 
 
@@ -70,6 +71,8 @@ def run(args) -> None:
         "trend": lambda: trend.generate(theme, history, days=args.trend_days),
         "ranking": lambda: ranking.generate(theme, stats["top_posts"]),
         "recent": lambda: recent.generate(theme, stats["recent_posts"]),
+        "heatmap": lambda: heatmap.generate(theme, stats.get("activity", {}), weeks=args.weeks),
+        "badge": lambda: badge.generate(theme, stats),
     }
 
     for card in requested_cards:

@@ -1,6 +1,6 @@
 """Tests for the SVG card templates."""
 
-from velog_readme_stats.cards import ranking, recent, summary, trend
+from velog_readme_stats.cards import badge, heatmap, ranking, recent, summary, trend
 
 
 def test_summary_returns_svg(theme, sample_velog_stats):
@@ -71,6 +71,38 @@ def test_trend_single_point(theme):
     svg = trend.generate(theme, [{"date": "2026-01-01", "total_views": 100}])
     assert "<svg" in svg
     assert "more days are collected" in svg
+
+
+def test_badge_returns_svg(theme, sample_velog_stats):
+    svg = badge.generate(theme, sample_velog_stats)
+    assert svg.strip().startswith("<svg")
+    assert "</svg>" in svg
+
+
+def test_badge_contains_values(theme, sample_velog_stats):
+    svg = badge.generate(theme, sample_velog_stats)
+    assert "12.3k" in svg
+    assert "18" in svg  # total_posts
+
+
+def test_heatmap_returns_svg(theme):
+    svg = heatmap.generate(theme, {"2026-01-01": 2, "2026-01-15": 1})
+    assert svg.strip().startswith("<svg")
+    assert "</svg>" in svg
+
+
+def test_heatmap_empty_activity(theme):
+    svg = heatmap.generate(theme, {})
+    assert "<svg" in svg
+    assert "0 posts" in svg
+
+
+def test_heatmap_reflects_activity_tooltip(theme):
+    from datetime import date, timedelta
+
+    recent_day = (date.today() - timedelta(days=3)).isoformat()
+    svg = heatmap.generate(theme, {recent_day: 3})
+    assert "3 posts" in svg
 
 
 def test_card_custom_theme_color(sample_velog_stats):

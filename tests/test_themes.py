@@ -17,6 +17,10 @@ def test_resolve_theme_dict_overrides_default():
     assert theme["void"] == THEMES["midnight"]["void"]
 
 
+def test_at_least_ten_themes_available():
+    assert len(THEMES) >= 10
+
+
 def test_all_themes_have_required_keys():
     required = {"void", "nebula", "synapse_cyan", "dendrite_violet", "axon_amber", "text_bright", "text_dim", "text_faint"}
     for name, theme in THEMES.items():

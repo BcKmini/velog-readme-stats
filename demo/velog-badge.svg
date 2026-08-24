@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="258" height="40" viewBox="0 0 258 40">
+<style>
+      .bg { fill: #0D1117; }
+      .border { stroke: #FF4500; }
+      .text { fill: #ffffff; }
+      @media (prefers-color-scheme: light) {
+        .bg { fill: #ffffff; }
+        .text { fill: #1f2328; }
+      }
+    </style>
+<rect class="bg" width="258" height="40" rx="20"/>
+<rect x="1" y="1" width="256" height="38" fill="none" class="border" stroke-width="1" stroke-opacity="0.4" rx="19"/>
+<text x="129.0" y="25.0" text-anchor="middle" class="text" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600">📝 18.4k views · 312♥ · 47 posts</text>
+</svg>

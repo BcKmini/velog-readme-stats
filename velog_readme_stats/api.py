@@ -41,6 +41,18 @@ class VelogError(RuntimeError):
     """Raised when a Velog API request fails or returns an unexpected shape."""
 
 
+def _daily_activity(posts: list[dict]) -> dict[str, int]:
+    """Count posts per release date (YYYY-MM-DD). Pure function, no I/O —
+    kept separate from VelogClient so it's testable without a network call.
+    """
+    counts: dict[str, int] = {}
+    for post in posts:
+        day = (post.get("released_at") or "")[:10]
+        if day:
+            counts[day] = counts.get(day, 0) + 1
+    return counts
+
+
 class VelogClient:
     def __init__(self, username: str, access_token: str = None, refresh_token: str = None):
         self.username = username
@@ -108,8 +120,9 @@ class VelogClient:
     def fetch_user_stats(self, count: int = 5) -> dict:
         """Fetch every post plus per-post view/like counts and summarize them.
 
-        Returns totals, the top `count` posts by views, and the most recent
-        `count` posts by release date.
+        Returns totals, the top `count` posts by views, the most recent
+        `count` posts by release date, and a day-level activity map used by
+        the heatmap card.
         """
         posts = self.fetch_all_posts()
 
@@ -141,4 +154,5 @@ class VelogClient:
             "total_posts": len(posts),
             "top_posts": top_posts,
             "recent_posts": recent_posts,
+            "activity": _daily_activity(enriched),
         }
