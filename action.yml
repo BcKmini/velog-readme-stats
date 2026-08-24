@@ -16,7 +16,7 @@ inputs:
     description: "Velog refresh_token cookie value (store as a repository secret)"
     required: true
   cards:
-    description: "Comma-separated list of cards to generate: summary, trend, ranking, recent, heatmap, badge"
+    description: "Comma-separated list of cards to generate: summary, trend, ranking, recent, heatmap, badge, dashboard"
     required: false
     default: "summary,trend,recent"
   theme:
@@ -47,6 +47,10 @@ inputs:
     description: "Number of weeks shown on the heatmap card"
     required: false
     default: "20"
+  sections:
+    description: "Comma-separated sections to stack inside the 'dashboard' card, in order: summary, trend, ranking, recent"
+    required: false
+    default: "summary,trend,recent"
 
 runs:
   using: "composite"
@@ -76,6 +80,7 @@ runs:
           --diff-days "${{ inputs.diff_days }}"
           --count "${{ inputs.count }}"
           --weeks "${{ inputs.weeks }}"
+          --sections "${{ inputs.sections }}"
         )
         if [ -n "${{ inputs.history_path }}" ]; then
           ARGS+=(--history-path "${{ inputs.history_path }}")

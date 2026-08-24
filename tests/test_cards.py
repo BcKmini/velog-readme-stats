@@ -1,6 +1,6 @@
 """Tests for the SVG card templates."""
 
-from velog_readme_stats.cards import badge, heatmap, ranking, recent, summary, trend
+from velog_readme_stats.cards import badge, dashboard, heatmap, ranking, recent, summary, trend
 
 
 def test_summary_returns_svg(theme, sample_velog_stats):
@@ -103,6 +103,42 @@ def test_heatmap_reflects_activity_tooltip(theme):
     recent_day = (date.today() - timedelta(days=3)).isoformat()
     svg = heatmap.generate(theme, {recent_day: 3})
     assert "3 posts" in svg
+
+
+def test_dashboard_returns_svg(theme, sample_velog_stats, sample_velog_history):
+    svg = dashboard.generate(theme, sample_velog_stats, sample_velog_history)
+    assert svg.strip().startswith("<svg")
+    assert "</svg>" in svg
+
+
+def test_dashboard_default_sections_present(theme, sample_velog_stats, sample_velog_history):
+    svg = dashboard.generate(theme, sample_velog_stats, sample_velog_history)
+    assert "TOTAL STATS" in svg
+    assert "VIEWS TREND" in svg
+    assert "RECENT POSTS" in svg
+
+
+def test_dashboard_custom_sections(theme, sample_velog_stats, sample_velog_history):
+    svg = dashboard.generate(theme, sample_velog_stats, sample_velog_history, sections=("summary", "ranking"))
+    assert "TOTAL STATS" in svg
+    assert "TOP POSTS" in svg
+    assert "VIEWS TREND" not in svg
+    assert "RECENT POSTS" not in svg
+
+
+def test_dashboard_falls_back_to_summary_when_no_valid_sections(theme, sample_velog_stats):
+    svg = dashboard.generate(theme, sample_velog_stats, [], sections=("nonsense",))
+    assert "TOTAL STATS" in svg
+
+
+def test_dashboard_empty_history_trend_section(theme, sample_velog_stats):
+    svg = dashboard.generate(theme, sample_velog_stats, [], sections=("trend",))
+    assert "No data collected yet." in svg
+
+
+def test_dashboard_username_shown(theme, sample_velog_stats, sample_velog_history):
+    svg = dashboard.generate(theme, sample_velog_stats, sample_velog_history)
+    assert "testvelog" in svg
 
 
 def test_card_custom_theme_color(sample_velog_stats):
