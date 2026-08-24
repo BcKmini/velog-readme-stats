@@ -1,0 +1,78 @@
+name: "Velog Readme Stats"
+description: "Generate beautiful, customizable SVG cards from your Velog stats for your GitHub profile README."
+author: "BcKmini"
+branding:
+  icon: "bar-chart-2"
+  color: "orange"
+
+inputs:
+  velog_username:
+    description: "Your Velog username (the part after @ in velog.io/@username)"
+    required: true
+  access_token:
+    description: "Velog access_token cookie value (store as a repository secret)"
+    required: true
+  refresh_token:
+    description: "Velog refresh_token cookie value (store as a repository secret)"
+    required: true
+  cards:
+    description: "Comma-separated list of cards to generate: summary, trend, ranking, recent"
+    required: false
+    default: "summary,trend,recent"
+  theme:
+    description: "Built-in theme name: midnight, ember, forest, rose, mono"
+    required: false
+    default: "midnight"
+  output_dir:
+    description: "Directory (relative to your repo root) to write generated SVGs into"
+    required: false
+    default: "assets/velog"
+  history_path:
+    description: "Path to the JSON file that stores daily snapshots for the trend card (default: <output_dir>/velog-history.json)"
+    required: false
+    default: ""
+  trend_days:
+    description: "How many days of history the trend card shows"
+    required: false
+    default: "30"
+  diff_days:
+    description: "How many days back the summary card's delta is computed against"
+    required: false
+    default: "7"
+  count:
+    description: "Number of posts shown in the ranking/recent cards"
+    required: false
+    default: "5"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+
+    - name: Install dependencies
+      shell: bash
+      run: pip install -r "${{ github.action_path }}/requirements.txt"
+
+    - name: Generate Velog stats cards
+      shell: bash
+      env:
+        VELOG_ACCESS_TOKEN: ${{ inputs.access_token }}
+        VELOG_REFRESH_TOKEN: ${{ inputs.refresh_token }}
+        PYTHONPATH: ${{ github.action_path }}
+      run: |
+        ARGS=(
+          --username "${{ inputs.velog_username }}"
+          --cards "${{ inputs.cards }}"
+          --theme "${{ inputs.theme }}"
+          --output-dir "${{ inputs.output_dir }}"
+          --trend-days "${{ inputs.trend_days }}"
+          --diff-days "${{ inputs.diff_days }}"
+          --count "${{ inputs.count }}"
+        )
+        if [ -n "${{ inputs.history_path }}" ]; then
+          ARGS+=(--history-path "${{ inputs.history_path }}")
+        fi
+        python -m velog_readme_stats.cli "${ARGS[@]}"

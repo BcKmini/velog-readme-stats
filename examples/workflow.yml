@@ -1,0 +1,33 @@
+# Copy this into <your-profile-repo>/.github/workflows/velog-stats.yml
+name: Update Velog Stats
+
+on:
+  schedule:
+    - cron: "0 */6 * * *" # every 6 hours
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: BcKmini/velog-readme-stats@main
+        with:
+          velog_username: your-velog-id
+          access_token: ${{ secrets.VELOG_ACCESS_TOKEN }}
+          refresh_token: ${{ secrets.VELOG_REFRESH_TOKEN }}
+          cards: summary,trend,recent
+          theme: midnight
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/velog
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: update velog stats"
+            git push
+          fi
