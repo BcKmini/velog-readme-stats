@@ -3,52 +3,52 @@
 [![CI](https://github.com/BcKmini/velog-readme-stats/actions/workflows/ci.yml/badge.svg)](https://github.com/BcKmini/velog-readme-stats/actions/workflows/ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-Generate beautiful, customizable **SVG cards from your [Velog](https://velog.io) stats** — total views, likes, post ranking, recent posts, and a views trend chart — and drop them straight into your GitHub profile README or any pinned repo.
+[Velog](https://velog.io) 통계(전체 조회수, 좋아요, 인기글 랭킹, 최근 게시글, 조회수 추이 그래프)를 예쁘 **SVG 카드**로 만들어 GitHub 프로필 README나 Pinned 레포에 바로 넣을 수 있게 해주는 도구입니다.
 
-Inspired by [github-profile-trophy](https://github.com/ryo-ma/github-profile-trophy), but built for Velog: since Velog stats are private to the author (there's no public API for them), this ships as a **GitHub Action you run in your own repo with your own credentials** — your data and tokens never leave your GitHub Actions runner.
+[github-profile-trophy](https://github.com/ryo-ma/github-profile-trophy)에서 영감을 받았지만, Velog에 맞게 다르게 설계했습니다. Velog 조회수/좋아요 데이터는 작성자 본인에게만 공개되는 비공개 데이터라 공개 API가 없기 때문에, 이 도구는 **여러분 자신의 GitHub Actions에서, 여러분 자신의 인증 정보로 실행되는 GitHub Action**으로 배포됩니다. 데이터와 토큰이 여러분의 Actions 러너 밖으로 나가는 일이 없습니다.
 
 <p align="center">
-  <img src="demo/velog-summary.svg" width="90%" alt="summary card demo" />
+  <img src="demo/velog-summary.svg" width="90%" alt="요약 카드 예시" />
 </p>
 <p align="center">
-  <img src="demo/velog-recent.svg" width="90%" alt="recent posts card demo" />
+  <img src="demo/velog-recent.svg" width="90%" alt="최근 게시글 카드 예시" />
 </p>
 <p align="center">
-  <img src="demo/velog-ranking.svg" width="90%" alt="ranking card demo" />
+  <img src="demo/velog-ranking.svg" width="90%" alt="랭킹 카드 예시" />
 </p>
 <p align="center">
-  <img src="demo/velog-trend.svg" width="90%" alt="trend card demo" />
+  <img src="demo/velog-trend.svg" width="90%" alt="추이 카드 예시" />
 </p>
 
-*(sample data — themed with the `ember` preset)*
+*(샘플 데이터, `ember` 테마 적용)*
 
-## Features
+## 기능
 
-- **4 cards, pick any combination**: `summary`, `trend`, `ranking`, `recent`
-- **5 built-in themes**: `midnight` (default), `ember`, `forest`, `rose`, `mono` — or override any color
-- **Automatic light/dark mode** via `prefers-color-scheme`, no extra config
-- **No database, no external service** — a small JSON snapshot file (committed to your own repo) tracks history for the trend card
-- **Runs entirely in your GitHub Actions** — your Velog cookies stay in your repo's secrets, never sent anywhere else
-- Usable as a **GitHub Action** (`uses: BcKmini/velog-readme-stats@main`) or as a **standalone CLI** (`python -m velog_readme_stats.cli`)
+- **카드 4종, 원하는 조합만 선택**: `summary`, `trend`, `ranking`, `recent`
+- **내장 테마 5종**: `midnight`(기본), `ember`, `forest`, `rose`, `mono` — 색상 개별 오버라이드도 가능
+- **다크/라이트 모드 자동 대응** (`prefers-color-scheme`), 별도 설정 불필요
+- **DB도 외부 서비스도 없음** — 여러분 레포에 커밋되는 작은 JSON 스냅샷 파일로 추이를 계산
+- **전부 여러분의 GitHub Actions 안에서 실행** — Velog 쿠키는 여러분 레포의 시크릿에만 존재
+- **GitHub Action**(`uses: BcKmini/velog-readme-stats@main`)으로도, **독립 CLI**(`python -m velog_readme_stats.cli`)로도 사용 가능
 
-## Quick start
+## 빠르게 시작하기
 
-### 1. Get your Velog tokens
+### 1. Velog 토큰 발급받기
 
-1. Log into [velog.io](https://velog.io)
-2. Open DevTools → Application → Cookies → `velog.io`
-3. Copy the `access_token` and `refresh_token` values
+1. [velog.io](https://velog.io) 로그인
+2. 개발자도구 → Application → Cookies → `velog.io`
+3. `access_token`, `refresh_token` 값 복사
 
-### 2. Add them as repository secrets
+### 2. 리포지토리 시크릿으로 등록
 
-In your profile repo (the one named exactly like your GitHub username), go to **Settings → Secrets and variables → Actions** and add:
+프로필 레포(GitHub 아이디와 이름이 같은 그 레포)의 **Settings → Secrets and variables → Actions**에서 아래 두 개를 등록하세요:
 
 - `VELOG_ACCESS_TOKEN`
 - `VELOG_REFRESH_TOKEN`
 
-### 3. Add the workflow
+### 3. 워크플로우 추가
 
-Copy [`examples/workflow.yml`](examples/workflow.yml) into `.github/workflows/velog-stats.yml` in your repo, and set `velog_username` to your Velog id:
+[`examples/workflow.yml`](examples/workflow.yml) 내용을 여러분 레포의 `.github/workflows/velog-stats.yml`로 복사하고, `velog_username`을 본인 Velog 아이디로 바꿔주세요:
 
 ```yaml
 name: Update Velog Stats
@@ -85,44 +85,44 @@ jobs:
           fi
 ```
 
-### 4. Embed the cards in your README
+### 4. README에 카드 넣기
 
 ```markdown
-![Velog summary](https://raw.githubusercontent.com/<you>/<you>/main/assets/velog/velog-summary.svg)
-![Velog recent posts](https://raw.githubusercontent.com/<you>/<you>/main/assets/velog/velog-recent.svg)
+![Velog summary](https://raw.githubusercontent.com/<본인아이디>/<본인아이디>/main/assets/velog/velog-summary.svg)
+![Velog recent posts](https://raw.githubusercontent.com/<본인아이디>/<본인아이디>/main/assets/velog/velog-recent.svg)
 ```
 
-Run the workflow once manually (Actions tab → *Update Velog Stats* → *Run workflow*) to generate the first set of SVGs.
+Actions 탭에서 *Update Velog Stats* 워크플로우를 한 번 수동 실행(workflow_dispatch)하면 첫 SVG들이 생성됩니다.
 
-## Configuration reference
+## 설정값 레퍼런스
 
-All inputs are optional except `velog_username`, `access_token`, and `refresh_token`.
+`velog_username`, `access_token`, `refresh_token`을 제외한 나머지는 전부 선택 사항입니다.
 
-| Input          | Default                          | Description                                                        |
+| 입력값          | 기본값                             | 설명                                                        |
 | -------------- | --------------------------------- | -------------------------------------------------------------------- |
-| `velog_username` | —                                | Your Velog id (the part after `@` in `velog.io/@id`)                |
-| `access_token`   | —                                | Velog `access_token` cookie (store as a secret)                     |
-| `refresh_token`  | —                                | Velog `refresh_token` cookie (store as a secret)                    |
-| `cards`          | `summary,trend,recent`           | Comma-separated list from `summary`, `trend`, `ranking`, `recent`   |
+| `velog_username` | —                                | Velog 아이디 (`velog.io/@아이디`의 `@` 뒷부분)                |
+| `access_token`   | —                                | Velog `access_token` 쿠키 (시크릿으로 저장)                     |
+| `refresh_token`  | —                                | Velog `refresh_token` 쿠키 (시크릿으로 저장)                    |
+| `cards`          | `summary,trend,recent`           | `summary`, `trend`, `ranking`, `recent` 중 콤마로 구분해서 선택   |
 | `theme`          | `midnight`                       | `midnight`, `ember`, `forest`, `rose`, `mono`                       |
-| `output_dir`     | `assets/velog`                   | Where the SVGs (and history JSON) get written                       |
-| `history_path`   | `<output_dir>/velog-history.json`| Override the trend history file location                            |
-| `trend_days`     | `30`                              | Days of history shown on the trend card                             |
-| `diff_days`      | `7`                               | How many days back the summary card's delta is computed against     |
-| `count`          | `5`                               | Posts shown on the ranking/recent cards                             |
+| `output_dir`     | `assets/velog`                   | SVG(와 히스토리 JSON)를 쓸 디렉토리                       |
+| `history_path`   | `<output_dir>/velog-history.json`| 추이 히스토리 파일 경로 직접 지정                            |
+| `trend_days`     | `30`                              | 추이 카드에 보여줄 히스토리 일수                             |
+| `diff_days`      | `7`                               | 요약 카드의 증감을 며칠 전 대비로 계산할지                     |
+| `count`          | `5`                               | 랭킹/최근 게시글 카드에 보여줄 게시글 수                             |
 
-## Cards
+## 카드 종류
 
-| Card      | What it shows                                                            |
+| 카드      | 내용                                                            |
 | --------- | -------------------------------------------------------------------------- |
-| `summary` | Total views / likes / posts, each with an N-day delta                     |
-| `trend`   | Area+line chart of total views over the last N days                       |
-| `ranking` | Top N posts sorted by views                                               |
-| `recent`  | Latest N posts sorted by release date                                     |
+| `summary` | 전체 조회수/좋아요/게시글 수 + N일 증감                     |
+| `trend`   | 최근 N일 전체 조회수 영역+라인 차트                       |
+| `ranking` | 조회수 기준 인기글 Top N                                               |
+| `recent`  | 작성일 기준 최근 게시글 N개                                     |
 
-## Using it without GitHub Actions
+## GitHub Actions 없이 사용하기
 
-The core is a plain Python package, so you can run it locally or from any CI:
+핵심 로직은 순수 Python 패키지라, 로컬이나 다른 CI에서도 그대로 돌릴 수 있습니다:
 
 ```bash
 pip install -r requirements.txt
@@ -131,14 +131,14 @@ export VELOG_REFRESH_TOKEN=...
 python -m velog_readme_stats.cli --username your-velog-id --cards summary,trend,recent,ranking --theme forest
 ```
 
-## Why not a hosted service, like github-profile-trophy?
+## 왜 github-profile-trophy처럼 호스팅된 서비스가 아닌가요?
 
-`github-profile-trophy` can be a single hosted URL because GitHub's contribution stats are public. Velog view/like counts are **only visible to the post author** — Velog itself has no public stats API. Getting them requires the author's own session cookies, so a shared hosted endpoint would mean sending your credentials to a third party. Running this as a GitHub Action in your own repo avoids that entirely: nothing ever leaves your own Actions runner.
+`github-profile-trophy`가 URL 하나로 동작할 수 있는 이유는 GitHub의 컸트리붸션 통계가 공개 데이터이기 때문입니다. Velog의 조회수/좋아요는 **작성자 본인에게만 공개**되고, Velog 자체에 공개 통계 API가 없습니다. 이 데이터를 가져오려면 작성자 본인의 세션 쿠키가 필요한데, 이걸 공용 호스팅 서비스에 보내는 건 공 인증 정보를 제3자에게 넘기는 셀입니다. 이 도구를 여러분 자신의 레포의 GitHub Actions로 실행하면 그 문제가 아예 발생하지 않습니다 — 아무것도 여러분의 Actions 러너 밖으로 나가지 않습니다.
 
-## Contributing
+## 기여하기
 
-Issues and PRs are welcome — new themes, new card types, and bug reports all count. Run `pip install -r requirements-dev.txt && pytest` before opening a PR.
+이슈와 PR을 환영합니다 — 새 테마, 새 카드 종류, 버그 리포트 모두 좋습니다. PR 올리기 전에 `pip install -r requirements-dev.txt && pytest`를 실행해주세요.
 
-## License
+## 라이선스
 
 [Apache License 2.0](LICENSE)
