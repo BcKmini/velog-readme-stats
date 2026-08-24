@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="178" viewBox="0 0 384 178">
+<style>
+      .bg { fill: #0D1117; }
+      .border { stroke: #FF4500; }
+      .title { fill: #ffffff; }
+      .sub { fill: #8b6060; }
+      @media (prefers-color-scheme: light) {
+        .bg { fill: #ffffff; }
+        .title { fill: #1f2328; }
+        .sub { fill: #6e7781; }
+      }
+    </style>
+<rect class="bg" width="384" height="178" rx="12"/>
+<rect x="1" y="1" width="382" height="176" fill="none" class="border" stroke-width="1" stroke-opacity="0.25" rx="12"/>
+<text x="24" y="26" class="title" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="700">Posting Activity — 40 posts / 140d</text>
+<rect x="24" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-05: 0 posts</title></rect>
+<rect x="24" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-06: 0 posts</title></rect>
+<rect x="24" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-07: 0 posts</title></rect>
+<rect x="24" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-04-08: 1 post</title></rect>
+<rect x="24" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-09: 0 posts</title></rect>
+<rect x="24" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-10: 0 posts</title></rect>
+<rect x="24" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-11: 0 posts</title></rect>
+<rect x="40" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-04-12: 1 post</title></rect>
+<rect x="40" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-13: 0 posts</title></rect>
+<rect x="40" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-14: 0 posts</title></rect>
+<rect x="40" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-15: 0 posts</title></rect>
+<rect x="40" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-04-16: 1 post</title></rect>
+<rect x="40" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-17: 0 posts</title></rect>
+<rect x="40" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-18: 0 posts</title></rect>
+<rect x="56" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-19: 0 posts</title></rect>
+<rect x="56" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-20: 0 posts</title></rect>
+<rect x="56" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-21: 0 posts</title></rect>
+<rect x="56" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-22: 0 posts</title></rect>
+<rect x="56" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-23: 0 posts</title></rect>
+<rect x="56" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-24: 0 posts</title></rect>
+<rect x="56" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-25: 0 posts</title></rect>
+<rect x="72" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-26: 0 posts</title></rect>
+<rect x="72" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-27: 0 posts</title></rect>
+<rect x="72" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="1.00"><title>2026-04-28: 2 posts</title></rect>
+<rect x="72" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-04-29: 0 posts</title></rect>
+<rect x="72" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="1.00"><title>2026-04-30: 2 posts</title></rect>
+<rect x="72" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-01: 0 posts</title></rect>
+<rect x="72" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-02: 0 posts</title></rect>
+<rect x="88" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-03: 0 posts</title></rect>
+<rect x="88" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="1.00"><title>2026-05-04: 2 posts</title></rect>
+<rect x="88" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-05-05: 1 post</title></rect>
+<rect x="88" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-06: 0 posts</title></rect>
+<rect x="88" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-07: 0 posts</title></rect>
+<rect x="88" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-08: 0 posts</title></rect>
+<rect x="88" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-05-09: 1 post</title></rect>
+<rect x="104" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-10: 0 posts</title></rect>
+<rect x="104" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-05-11: 1 post</title></rect>
+<rect x="104" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-12: 0 posts</title></rect>
+<rect x="104" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-13: 0 posts</title></rect>
+<rect x="104" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-14: 0 posts</title></rect>
+<rect x="104" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-05-15: 1 post</title></rect>
+<rect x="104" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-16: 0 posts</title></rect>
+<rect x="120" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-17: 0 posts</title></rect>
+<rect x="120" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-18: 0 posts</title></rect>
+<rect x="120" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-19: 0 posts</title></rect>
+<rect x="120" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-05-20: 1 post</title></rect>
+<rect x="120" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-21: 0 posts</title></rect>
+<rect x="120" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-22: 0 posts</title></rect>
+<rect x="120" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-23: 0 posts</title></rect>
+<rect x="136" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-24: 0 posts</title></rect>
+<rect x="136" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-05-25: 1 post</title></rect>
+<rect x="136" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-26: 0 posts</title></rect>
+<rect x="136" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-27: 0 posts</title></rect>
+<rect x="136" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-28: 0 posts</title></rect>
+<rect x="136" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-05-29: 1 post</title></rect>
+<rect x="136" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-30: 0 posts</title></rect>
+<rect x="152" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-05-31: 0 posts</title></rect>
+<rect x="152" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-01: 0 posts</title></rect>
+<rect x="152" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-02: 0 posts</title></rect>
+<rect x="152" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-03: 0 posts</title></rect>
+<rect x="152" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-04: 0 posts</title></rect>
+<rect x="152" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="1.00"><title>2026-06-05: 2 posts</title></rect>
+<rect x="152" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-06: 0 posts</title></rect>
+<rect x="168" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-07: 0 posts</title></rect>
+<rect x="168" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-06-08: 1 post</title></rect>
+<rect x="168" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-09: 0 posts</title></rect>
+<rect x="168" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-06-10: 1 post</title></rect>
+<rect x="168" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-11: 0 posts</title></rect>
+<rect x="168" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-12: 0 posts</title></rect>
+<rect x="168" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-13: 0 posts</title></rect>
+<rect x="184" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-14: 0 posts</title></rect>
+<rect x="184" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-15: 0 posts</title></rect>
+<rect x="184" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-16: 0 posts</title></rect>
+<rect x="184" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-17: 0 posts</title></rect>
+<rect x="184" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-18: 0 posts</title></rect>
+<rect x="184" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-19: 0 posts</title></rect>
+<rect x="184" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-06-20: 1 post</title></rect>
+<rect x="200" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-21: 0 posts</title></rect>
+<rect x="200" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-22: 0 posts</title></rect>
+<rect x="200" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-23: 0 posts</title></rect>
+<rect x="200" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-24: 0 posts</title></rect>
+<rect x="200" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-06-25: 1 post</title></rect>
+<rect x="200" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-26: 0 posts</title></rect>
+<rect x="200" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-27: 0 posts</title></rect>
+<rect x="216" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-06-28: 1 post</title></rect>
+<rect x="216" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-29: 0 posts</title></rect>
+<rect x="216" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-06-30: 0 posts</title></rect>
+<rect x="216" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-01: 0 posts</title></rect>
+<rect x="216" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-02: 0 posts</title></rect>
+<rect x="216" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-03: 0 posts</title></rect>
+<rect x="216" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-04: 0 posts</title></rect>
+<rect x="232" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="1.00"><title>2026-07-05: 2 posts</title></rect>
+<rect x="232" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-07-06: 1 post</title></rect>
+<rect x="232" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-07: 0 posts</title></rect>
+<rect x="232" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-08: 0 posts</title></rect>
+<rect x="232" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-09: 0 posts</title></rect>
+<rect x="232" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-10: 0 posts</title></rect>
+<rect x="232" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-11: 0 posts</title></rect>
+<rect x="248" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-07-12: 1 post</title></rect>
+<rect x="248" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-13: 0 posts</title></rect>
+<rect x="248" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-14: 0 posts</title></rect>
+<rect x="248" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-15: 0 posts</title></rect>
+<rect x="248" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-16: 0 posts</title></rect>
+<rect x="248" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-17: 0 posts</title></rect>
+<rect x="248" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-18: 0 posts</title></rect>
+<rect x="264" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-19: 0 posts</title></rect>
+<rect x="264" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-07-20: 1 post</title></rect>
+<rect x="264" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-21: 0 posts</title></rect>
+<rect x="264" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-22: 0 posts</title></rect>
+<rect x="264" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-23: 0 posts</title></rect>
+<rect x="264" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-24: 0 posts</title></rect>
+<rect x="264" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-25: 0 posts</title></rect>
+<rect x="280" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-26: 0 posts</title></rect>
+<rect x="280" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-27: 0 posts</title></rect>
+<rect x="280" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-28: 0 posts</title></rect>
+<rect x="280" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-29: 0 posts</title></rect>
+<rect x="280" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-30: 0 posts</title></rect>
+<rect x="280" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-07-31: 0 posts</title></rect>
+<rect x="280" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-01: 0 posts</title></rect>
+<rect x="296" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-08-02: 1 post</title></rect>
+<rect x="296" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="1.00"><title>2026-08-03: 2 posts</title></rect>
+<rect x="296" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-08-04: 1 post</title></rect>
+<rect x="296" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-05: 0 posts</title></rect>
+<rect x="296" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="1.00"><title>2026-08-06: 2 posts</title></rect>
+<rect x="296" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-07: 0 posts</title></rect>
+<rect x="296" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-08: 0 posts</title></rect>
+<rect x="312" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-09: 0 posts</title></rect>
+<rect x="312" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-10: 0 posts</title></rect>
+<rect x="312" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-11: 0 posts</title></rect>
+<rect x="312" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-12: 0 posts</title></rect>
+<rect x="312" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-13: 0 posts</title></rect>
+<rect x="312" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-08-14: 1 post</title></rect>
+<rect x="312" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-15: 0 posts</title></rect>
+<rect x="328" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-16: 0 posts</title></rect>
+<rect x="328" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-08-17: 1 post</title></rect>
+<rect x="328" y="72" width="13" height="13" rx="2" fill="#FF4500" opacity="1.00"><title>2026-08-18: 2 posts</title></rect>
+<rect x="328" y="88" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-19: 0 posts</title></rect>
+<rect x="328" y="104" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-20: 0 posts</title></rect>
+<rect x="328" y="120" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-08-21: 1 post</title></rect>
+<rect x="328" y="136" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-22: 0 posts</title></rect>
+<rect x="344" y="40" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"><title>2026-08-23: 1 post</title></rect>
+<rect x="344" y="56" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"><title>2026-08-24: 0 posts</title></rect>
+<text x="232" y="178" text-anchor="end" class="sub" font-family="'JetBrains Mono', monospace" font-size="10">Less</text>
+<rect x="240" y="168" width="13" height="13" rx="2" fill="#FF4500" opacity="0.08"/>
+<rect x="256" y="168" width="13" height="13" rx="2" fill="#FF4500" opacity="0.35"/>
+<rect x="272" y="168" width="13" height="13" rx="2" fill="#FF4500" opacity="0.55"/>
+<rect x="288" y="168" width="13" height="13" rx="2" fill="#FF4500" opacity="0.75"/>
+<rect x="304" y="168" width="13" height="13" rx="2" fill="#FF4500" opacity="1.00"/>
+<text x="326" y="178" class="sub" font-family="'JetBrains Mono', monospace" font-size="10">More</text>
+</svg>
