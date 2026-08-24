@@ -3,7 +3,7 @@
 [![CI](https://github.com/BcKmini/velog-readme-stats/actions/workflows/ci.yml/badge.svg)](https://github.com/BcKmini/velog-readme-stats/actions/workflows/ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-[Velog](https://velog.io) 통계(전체 조회수, 좋아요, 인기글 랭킹, 최근 게시글, 조회수 추이 그래프)를 예쁘 **SVG 카드**로 만들어 GitHub 프로필 README나 Pinned 레포에 바로 넣을 수 있게 해주는 도구입니다.
+[Velog](https://velog.io) 통계(전체 조회수, 좋아요, 인기글 랭킹, 최근 게시글, 조회수 추이, 포스팅 활동 히트맵)를 예쁘 **SVG 카드**로 만들어 GitHub 프로필 README나 Pinned 레포에 바로 넣을 수 있게 해주는 도구입니다.
 
 [github-profile-trophy](https://github.com/ryo-ma/github-profile-trophy)에서 영감을 받았지만, Velog에 맞게 다르게 설계했습니다. Velog 조회수/좋아요 데이터는 작성자 본인에게만 공개되는 비공개 데이터라 공개 API가 없기 때문에, 이 도구는 **여러분 자신의 GitHub Actions에서, 여러분 자신의 인증 정보로 실행되는 GitHub Action**으로 배포됩니다. 데이터와 토큰이 여러분의 Actions 러너 밖으로 나가는 일이 없습니다.
 
@@ -19,13 +19,19 @@
 <p align="center">
   <img src="demo/velog-trend.svg" width="90%" alt="추이 카드 예시" />
 </p>
+<p align="center">
+  <img src="demo/velog-heatmap.svg" width="60%" alt="활동 히트맵 카드 예시" />
+</p>
+<p align="center">
+  <img src="demo/velog-badge.svg" alt="인라인 배지 카드 예시" />
+</p>
 
 *(샘플 데이터, `ember` 테마 적용)*
 
 ## 기능
 
-- **카드 4종, 원하는 조합만 선택**: `summary`, `trend`, `ranking`, `recent`
-- **내장 테마 5종**: `midnight`(기본), `ember`, `forest`, `rose`, `mono` — 색상 개별 오버라이드도 가능
+- **카드 6종, 원하는 조합만 선택**: `summary`, `trend`, `ranking`, `recent`, `heatmap`, `badge`
+- **내장 테마 12종**: `midnight`(기본), `ember`, `forest`, `rose`, `mono`, `ocean`, `sunset`, `lavender`, `cyberpunk`, `sakura`, `arctic`, `coffee` — 색상 개별 오버라이드도 가능
 - **다크/라이트 모드 자동 대응** (`prefers-color-scheme`), 별도 설정 불필요
 - **DB도 외부 서비스도 없음** — 여러분 레포에 커밋되는 작은 JSON 스냅샷 파일로 추이를 계산
 - **전부 여러분의 GitHub Actions 안에서 실행** — Velog 쿠키는 여러분 레포의 시크릿에만 존재
@@ -71,8 +77,8 @@ jobs:
           velog_username: your-velog-id
           access_token: ${{ secrets.VELOG_ACCESS_TOKEN }}
           refresh_token: ${{ secrets.VELOG_REFRESH_TOKEN }}
-          cards: summary,trend,recent
-          theme: midnight
+          cards: summary,trend,recent,heatmap
+          theme: ember
 
       - name: Commit changes
         run: |
@@ -103,13 +109,14 @@ Actions 탭에서 *Update Velog Stats* 워크플로우를 한 번 수동 실행(
 | `velog_username` | —                                | Velog 아이디 (`velog.io/@아이디`의 `@` 뒷부분)                |
 | `access_token`   | —                                | Velog `access_token` 쿠키 (시크릿으로 저장)                     |
 | `refresh_token`  | —                                | Velog `refresh_token` 쿠키 (시크릿으로 저장)                    |
-| `cards`          | `summary,trend,recent`           | `summary`, `trend`, `ranking`, `recent` 중 콤마로 구분해서 선택   |
-| `theme`          | `midnight`                       | `midnight`, `ember`, `forest`, `rose`, `mono`                       |
+| `cards`          | `summary,trend,recent`           | `summary`, `trend`, `ranking`, `recent`, `heatmap`, `badge` 중 콤마로 구분해서 선택   |
+| `theme`          | `midnight`                       | `midnight`, `ember`, `forest`, `rose`, `mono`, `ocean`, `sunset`, `lavender`, `cyberpunk`, `sakura`, `arctic`, `coffee` |
 | `output_dir`     | `assets/velog`                   | SVG(와 히스토리 JSON)를 쓸 디렉토리                       |
 | `history_path`   | `<output_dir>/velog-history.json`| 추이 히스토리 파일 경로 직접 지정                            |
 | `trend_days`     | `30`                              | 추이 카드에 보여줄 히스토리 일수                             |
 | `diff_days`      | `7`                               | 요약 카드의 증감을 며칠 전 대비로 계산할지                     |
 | `count`          | `5`                               | 랭킹/최근 게시글 카드에 보여줄 게시글 수                             |
+| `weeks`          | `20`                              | 활동 히트맵 카드에 보여줄 주(week) 수                             |
 
 ## 카드 종류
 
@@ -119,6 +126,8 @@ Actions 탭에서 *Update Velog Stats* 워크플로우를 한 번 수동 실행(
 | `trend`   | 최근 N일 전체 조회수 영역+라인 차트                       |
 | `ranking` | 조회수 기준 인기글 Top N                                               |
 | `recent`  | 작성일 기준 최근 게시글 N개                                     |
+| `heatmap` | 최근 N주 포스팅 활동을 GitHub 컸트리붸션 그래프 스타일로 표시              |
+| `badge`   | 다른 shields.io 배지 옷에 나란히 넣기 좋은 한 줄짜리 컴팩트 카드            |
 
 ## GitHub Actions 없이 사용하기
 
@@ -128,7 +137,7 @@ Actions 탭에서 *Update Velog Stats* 워크플로우를 한 번 수동 실행(
 pip install -r requirements.txt
 export VELOG_ACCESS_TOKEN=...
 export VELOG_REFRESH_TOKEN=...
-python -m velog_readme_stats.cli --username your-velog-id --cards summary,trend,recent,ranking --theme forest
+python -m velog_readme_stats.cli --username your-velog-id --cards summary,trend,recent,ranking,heatmap,badge --theme forest
 ```
 
 ## 왜 github-profile-trophy처럼 호스팅된 서비스가 아닌가요?
