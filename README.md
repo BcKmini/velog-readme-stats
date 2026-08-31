@@ -3,9 +3,9 @@
 [![CI](https://github.com/BcKmini/velog-readme-stats/actions/workflows/ci.yml/badge.svg)](https://github.com/BcKmini/velog-readme-stats/actions/workflows/ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-Velog 블로그 통계를 예쁘 SVG 카드로 만들어 GitHub 프로필 README, 고정 레포지토리, 어디든 바로 넣을 수 있게 해주는 도구입니다.
+Velog 블로그 통계를 예쁜 SVG 카드로 만들어 GitHub 프로필 README, 고정 레포지토리, 어디든 바로 넣을 수 있게 해주는 도구입니다.
 
-전체 조회수·좋아요·게시글 수 요약, 조회수 추이 그래프, 인기글 랭킹, 최근 게시글, 포스팅 활동 히트맵, 인라인 배지, 그리고 이 모든 걸 한 장으로 합친 대시보드 카드까지 — 카드 7종과 테마 12종을 조합해서 내 프로필에 딜 맞는 조합을 골라 쓸 수 있습니다.
+전체 조회수·좋아요·게시글 수 요약, 조회수 추이 그래프, 인기글 랭킹, 최근 게시글, 포스팅 활동 히트맵, 인라인 배지, 그리고 이 모든 걸 한 장으로 합친 대시보드 카드까지 — 카드 7종과 테마 12종을 조합해서 내 프로필에 딱 맞는 조합을 골라 쓸 수 있습니다.
 
 Velog는 조회수와 좋아요 데이터를 작성자 본인에게만 공개하고 별도의 공개 통계 API를 제공하지 않습니다. 그래서 이 도구는 여러분 자신의 GitHub Actions에서, 여러분 자신의 Velog 인증 정보로 실행되도록 설계했습니다. 데이터와 인증 토큰이 여러분의 저장소 밖으로 나가는 일이 없습니다.
 
@@ -39,19 +39,19 @@ Velog는 조회수와 좋아요 데이터를 작성자 본인에게만 공개하
 
 ### 포스팅 활동 히트맵 카드
 
-카드 값은 `heatmap`입니다. 최근 N주간 포스팅 활동을 컸트리붸션 그래프 형태로 보여줍니다.
+카드 값은 `heatmap`입니다. 최근 N주간 포스팅 활동을 컨트리뷰션 그래프 형태로 보여줍니다.
 
 <p align="center"><img src="demo/velog-heatmap.svg" width="55%" alt="포스팅 활동 히트맵 카드 예시" /></p>
 
 ### 인라인 배지 카드
 
-카드 값은 `badge`입니다. 다른 배지들 옷에 나란히 붙이기 좋은 한 줄짜리 컴팩트 카드입니다.
+카드 값은 `badge`입니다. 다른 배지들 옆에 나란히 붙이기 좋은 한 줄짜리 컴팩트 카드입니다.
 
 <p align="center"><img src="demo/velog-badge.svg" alt="인라인 배지 카드 예시" /></p>
 
 ### 조합형 대시보드 카드
 
-카드 값은 `dashboard`입니다. 요약, 추이, 랭킹, 최근 게시글 섬션을 원하는 순서로 골라서 한 장의 카드에 합칠 수 있습니다. 카드를 하나만 관리하고 싶을 때, 또는 README 공간을 아끼고 싶을 때 유용합니다.
+카드 값은 `dashboard`입니다. 요약, 추이, 랭킹, 최근 게시글 섹션을 원하는 순서로 골라서 한 장의 카드에 합칠 수 있습니다. 카드를 하나만 관리하고 싶을 때, 또는 README 공간을 아끼고 싶을 때 유용합니다.
 
 <p align="center"><img src="demo/velog-dashboard.svg" width="90%" alt="조합형 대시보드 카드 예시(요약, 추이, 최근 게시글)" /></p>
 
@@ -92,7 +92,7 @@ Velog는 조회수와 좋아요 데이터를 작성자 본인에게만 공개하
 
 - 카드 7종: `summary`, `trend`, `ranking`, `recent`, `heatmap`, `badge`, `dashboard`
 - 테마 12종: `midnight`, `ember`, `forest`, `rose`, `mono`, `ocean`, `sunset`, `lavender`, `cyberpunk`, `sakura`, `arctic`, `coffee`
-- 조합형 대시보드: `dashboard` 카드는 어떤 섬션을 어떤 순서로 넣을지 자유롭게 구성 가능
+- 조합형 대시보드: `dashboard` 카드는 어떤 섹션을 어떤 순서로 넣을지 자유롭게 구성 가능
 - 다크·라이트 모드 자동 대응, 별도 설정 불필요
 - 데이터베이스도 외부 서비스도 없음 — 여러분 저장소에 함께 저장되는 작은 기록 파일로 추이와 증감을 계산
 - 전부 여러분의 GitHub Actions 안에서만 실행 — Velog 인증 정보는 여러분 저장소의 시크릿에만 존재
@@ -176,7 +176,7 @@ Actions 탭에서 "Update Velog Stats" 워크플로우를 한 번 수동으로 �
 | `velog_username` | — | Velog 아이디입니다. `velog.io/@아이디`에서 `@` 뒷부분입니다. |
 | `access_token` | — | Velog `access_token` 쿠키 값입니다. 시크릿으로 저장합니다. |
 | `refresh_token` | — | Velog `refresh_token` 쿠키 값입니다. 시크릿으로 저장합니다. |
-| `cards` | `summary,trend,recent` | `summary`, `trend`, `ranking`, `recent`, `heatmap`, `badge`, `dashboard` 중 쉬표로 구분해서 선택합니다. |
+| `cards` | `summary,trend,recent` | `summary`, `trend`, `ranking`, `recent`, `heatmap`, `badge`, `dashboard` 중 쉼표로 구분해서 선택합니다. |
 | `theme` | `midnight` | `midnight`, `ember`, `forest`, `rose`, `mono`, `ocean`, `sunset`, `lavender`, `cyberpunk`, `sakura`, `arctic`, `coffee` |
 | `output_dir` | `assets/velog` | 생성된 SVG와 기록 파일을 저장할 디렉토리입니다. |
 | `history_path` | `<output_dir>/velog-history.json` | 추이 기록 파일 경로를 직접 지정합니다. |
@@ -184,7 +184,7 @@ Actions 탭에서 "Update Velog Stats" 워크플로우를 한 번 수동으로 �
 | `diff_days` | `7` | 요약 카드의 증감을 며칠 전 대비로 계산할지 정합니다. |
 | `count` | `5` | 랭킹, 최근 게시글 카드에 보여줄 게시글 수입니다. `dashboard` 카드 안에서는 3개 정도가 보기 좋습니다. |
 | `weeks` | `20` | 활동 히트맵 카드에 보여줄 주 수입니다. |
-| `sections` | `summary,trend,recent` | `dashboard` 카드에 어떤 섬션을 어떤 순서로 넣을지 정합니다. `summary`, `trend`, `ranking`, `recent` 중 선택합니다. |
+| `sections` | `summary,trend,recent` | `dashboard` 카드에 어떤 섹션을 어떤 순서로 넣을지 정합니다. `summary`, `trend`, `ranking`, `recent` 중 선택합니다. |
 
 ## 카드 종류
 
@@ -194,8 +194,8 @@ Actions 탭에서 "Update Velog Stats" 워크플로우를 한 번 수동으로 �
 | `trend` | 최근 N일 전체 조회수 영역과 선 그래프 |
 | `ranking` | 조회수 기준 인기글 상위 N개 |
 | `recent` | 작성일 기준 최근 게시글 N개 |
-| `heatmap` | 최근 N주 포스팅 활동을 컸트리붸션 그래프 형태로 표시 |
-| `badge` | 다른 배지 옷에 나란히 붙이기 좋은 한 줄짜리 컴팩트 카드 |
+| `heatmap` | 최근 N주 포스팅 활동을 컨트리뷰션 그래프 형태로 표시 |
+| `badge` | 다른 배지 옆에 나란히 붙이기 좋은 한 줄짜리 컴팩트 카드 |
 | `dashboard` | `summary`, `trend`, `ranking`, `recent`를 원하는 조합과 순서로 합친 카드 |
 
 ---
@@ -234,7 +234,7 @@ svg = summary.generate(my_theme, velog_stats_dict)
 
 ## 기여하기
 
-이슈와 풀 리퀴스트를 환영합니다. 새 테마, 새 카드, 버그 리포트 모두 좋습니다. 풀 리퀴스트를 올리기 전에 다음 명령으로 테스트를 실행해주세요.
+이슈와 풀 리퀘스트를 환영합니다. 새 테마, 새 카드, 버그 리포트 모두 좋습니다. 풀 리퀘스트를 올리기 전에 다음 명령으로 테스트를 실행해주세요.
 
 ```bash
 pip install -r requirements-dev.txt
